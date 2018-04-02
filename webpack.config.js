@@ -19,6 +19,10 @@ const config = {
                 loader: 'vue-loader'
             },
             {
+                test: /\.jsx$/,
+                loader: 'babel-loader'
+            },
+            {
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -30,6 +34,12 @@ const config = {
                 use: [
                     'style-loader',
                     'css-loader',
+                    {
+                        loader:'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
@@ -58,10 +68,10 @@ const config = {
 }
 
 if (isDev){
-    // config.devTool = '#cheap-module-eval-source-map'
+    config.devtool = '#cheap-module-eval-source-map';
     config.devServer = {
         port: 8000,
-        host: '0.0.0.0',
+        host: '127.0.0.1',
         overlay: { // webpack编译出现错误，则显示到网页上
             errors: true,
         },
@@ -71,11 +81,11 @@ if (isDev){
         // },
         //不刷新热加载数据
         hot:true
-    }
-    // config.plugins.push(
-    //     new webpack.HotModuleReplacementPlugin(),
-    //     new webpack.NoEmitOnErrorsPlugin()
-    // )
+    },
+    config.plugins.push(
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    )
 }
 
 module.exports = config
