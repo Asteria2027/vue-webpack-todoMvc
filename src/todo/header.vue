@@ -1,30 +1,19 @@
 <template>
-  <div class="main-header">
+  <header class="main-header">
     <h1>JTODO</h1>
-  </div>
+  </header>
 </template>
 
-<script type="text/ecmascript-6">
-export default {
-  data() {
-    return {
+<style lang="stylus" scoped>
+    .main-header {
+        text-align center
+        h1 {
+            font-size 100px
+            color rgba(175, 47, 47, 0.4)
+            margin 20px
+        }
 
     }
-  },
-  components: {
 
-  }
-}
-</script>
 
-<style scoped lang="stylus">
-.main-header {
-  text-align center 
-  h1 {
-    font-size 100px
-    color rgba(175,47,47,0.4)
-    font-weight 100
-    margin 20px
-  }
-}
 </style>

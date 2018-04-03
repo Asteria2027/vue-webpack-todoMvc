@@ -14,22 +14,11 @@ import Footer from './todo/footer.jsx'
 import todo from './todo/todo.vue'
 
 export default {
-  data () {
-    return {
-    };
-  },
-
   components: {
     Header,
     Footer,
     todo
-  },
-
-  computed: {},
-
-  mounted: {},
-
-  methods: {}
+  }
 }
 
 </script>

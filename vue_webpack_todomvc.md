@@ -9,5 +9,6 @@ npm i html-webpack-plugin
 npm i post-css-loader autoprefixer babel-loader babel-core
 npm i babel-preset-env babel-plugin-transform-vue-jsx
 npm i babel-helper-vue-jsx-merge-props babel-plugin-syntax-jsx
+npm i extract-text-webpack-plugin
 ```
 
